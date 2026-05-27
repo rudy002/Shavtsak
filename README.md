@@ -1,70 +1,29 @@
 # Shavtsak
 
-Shavtsak is a web application built for my military unit to simplify and optimize guard duty scheduling.  
-Instead of managing shifts manually in spreadsheets or WhatsApp, Shavtsak generates guard schedules that:
+> ⚠️ **A v2 (Sentinel) is currently in development** and will replace this version with a fully redesigned architecture.
 
-- Cover all required posts.
-- Respect unit constraints.
-- Maximize continuous sleep time and rest periods for each soldier.
+Shavtsak is a web app built for my military unit to automate and optimize guard duty scheduling. Instead of managing shifts manually in spreadsheets or WhatsApp, Shavtsak generates fair, constraint-respecting guard schedules automatically.
 
-The goal is to reduce friction and unfairness in guard rotations, especially during intense periods (e.g. wartime), while keeping the tool simple enough for anyone in the unit to use.
+🔗 **Live:** [shavtsak.vercel.app](https://shavtsak.vercel.app)
 
----
+## Features
 
-## 🎯 Main Features
+- Automatic guard schedule generation for any period
+- Multi-post support (main gate, floor, roof, etc.)
+- Fairness logic: avoids back-to-back shifts, maximizes rest windows
+- Simple enough for anyone in the unit to use
 
-_Currently implemented or partially implemented:_
+## Tech Stack
 
-- **Guard schedule generation**
-  - Create a schedule for a given period (e.g. one night, several days).
-  - Assign guards automatically according to predefined rules and constraints.
-- **Multiple posts**
-  - Supports several guard posts (e.g. main gate, floor/roof, etc.).
-  - Each post has its own time slots and required number of people.
-- **Basic fairness / rest logic**
-  - Avoids back-to-back guards when possible.
-  - Tries to maximize sleep windows and distribute shifts more evenly.
+- **React** + **Vite**
+- **JavaScript**
+- Deployed on **Vercel**
 
-_Planned / in progress:_
-
-- UI to configure:
-  - List of soldiers.
-  - Availability constraints.
-  - Guard posts and time slots.
-- Better fairness rules (e.g. limit per person per day, minimum rest gap).
-- Export / share schedule (PDF / image / copy-paste format).
-- Authentication or simple access control (optional, depending on unit needs).
-
----
-
-## 🛠 Tech Stack
-
-Shavtsak is currently built as a lightweight React application using Vite:
-
-- **Frontend**
-  - React
-  - Vite
-  - JavaScript / TypeScript (depending on how you evolve the project)
-  - CSS / (optionally Tailwind or another UI library if you add it later)
-
-_No backend is strictly required for the basic version if everything runs in the browser, but a backend can be added later if you want persistence or authentication._
-
----
-
-## 🚀 Getting Started (Development)
-
-### Prerequisites
-
-- Node.js (v18+ recommended)
-- npm or yarn
-
-### Installation
-
-Clone the repository and install dependencies:
+## Getting Started
 
 ```bash
-git clone <YOUR_REPO_URL>.git
-cd shavtsak
+git clone https://github.com/rudy002/Shavtsak.git
+cd Shavtsak
 npm install
-# or
-yarn install
+npm run dev
+```
